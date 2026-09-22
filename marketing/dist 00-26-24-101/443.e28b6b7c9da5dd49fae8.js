@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmarketing=self.webpackChunkmarketing||[]).push([[443],{443:(e,n,r)=>{r.r(n),r.d(n,{mount:()=>c});var t=r(271),u=r.n(t),a=r(650),k=r.n(a),c=function(e){k().render(u().createElement("h1",null,"Hi There!"),e)}}}]);
