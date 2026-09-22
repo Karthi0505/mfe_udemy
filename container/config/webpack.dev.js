@@ -1,8 +1,8 @@
 const {merge} = require('webpack-merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common.js');
 const packageJson = require('./../package.json');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devConfig = {
   mode: 'development',
@@ -20,10 +20,7 @@ const devConfig = {
         },
         shared: packageJson.dependencies, //this is to share the dependencies between the container and the marketing app. This is to avoid having multiple versions of react and react-dom in the same app.
     }),
-    new HtmlWebpackPlugin({
-        template: './public/index.html',
-    }),
-  ]
-}
+  ],
+};
 
 module.exports = merge(commonConfig, devConfig); //the devConfig overrides anything in commonConfig.
